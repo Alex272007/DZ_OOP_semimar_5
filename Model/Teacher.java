@@ -1,4 +1,4 @@
-package Data;
+package Model;
 
 public class Teacher extends User {
     private int teacherId;

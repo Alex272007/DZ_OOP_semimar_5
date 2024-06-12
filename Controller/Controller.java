@@ -1,12 +1,13 @@
 package Controller;
 
-import Data.Type;
-import Data.User;
-import Data.Student;
 import Service.DataService;
 import View.StudentView;
 
 import java.util.List;
+
+import Model.Student;
+import Model.Type;
+import Model.User;
 
 public class Controller {
     private final DataService service = new DataService();

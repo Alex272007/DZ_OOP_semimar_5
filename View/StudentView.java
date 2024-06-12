@@ -1,6 +1,6 @@
 package View;
 
-import Data.Student;
+import Model.Student;
 
 public class StudentView {
     public void printOnConsole(Student student){

@@ -1,4 +1,4 @@
-package Data;
+package Model;
 
 public enum Type {
     STUDENT,

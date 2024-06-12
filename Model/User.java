@@ -1,4 +1,4 @@
-package Data;
+package Model;
 
 public abstract class User {
     private String firstName;

@@ -2,10 +2,11 @@ package Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import Data.User;
-import Data.Type;
-import Data.Teacher;
-import Data.Student;
+
+import Model.Student;
+import Model.Teacher;
+import Model.Type;
+import Model.User;
 public class DataService {
     private List<User> userList;
 
