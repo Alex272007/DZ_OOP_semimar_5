@@ -1,10 +1,10 @@
-package Service;
+package service;
 
 import java.util.List;
 
-import Model.Student;
-import Model.StudentGroup;
-import Model.Teacher;
+import model.Student;
+import model.StudentGroup;
+import model.Teacher;
 
 public class StudentGroupService {
     
@@ -14,7 +14,7 @@ public class StudentGroupService {
         return studentGroup;
     }
 
-    public StudentGroup creaStudentGroup(Teacher teacher, List<Student> listStudents){
+    public StudentGroup createStudentGroup(Teacher teacher, List<Student> listStudents){
         studentGroup = new StudentGroup(teacher, listStudents);
         return studentGroup;
     }

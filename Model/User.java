@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 public abstract class User {
     private String firstName;
@@ -6,14 +6,11 @@ public abstract class User {
     private String lastName;
     private String dateB;
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "firstName='" + firstName + '\'' +
-                ", secondName='" + secondName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", dateB='" + dateB + '\'' +
-                '}';
+    public User(String firstName, String secondName, String lastName, String dateB) {
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.lastName = lastName;
+        this.dateB = dateB;
     }
 
     public String getFirstName() {
@@ -48,10 +45,13 @@ public abstract class User {
         this.dateB = dateB;
     }
 
-    public User(String firstName, String secondName, String lastName, String dateB) {
-        this.firstName = firstName;
-        this.secondName = secondName;
-        this.lastName = lastName;
-        this.dateB = dateB;
+    @Override
+    public String toString() {
+        return "User{" +
+                "firstName= '" + firstName + '\'' +
+                ", secondName= '" + secondName + '\'' +
+                ", lastName= '" + lastName + '\'' +
+                ", direction= '" + dateB + '\'' +
+                '}';
     }
 }

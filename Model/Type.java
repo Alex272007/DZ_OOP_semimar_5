@@ -1,6 +1,5 @@
-package Model;
+package model;
 
 public enum Type {
-    STUDENT,
-    TEACHER
+    Student, Teacher
 }

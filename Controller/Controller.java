@@ -1,27 +1,58 @@
-package Controller;
+package controller;
 
-import Service.DataService;
-import View.StudentView;
+import model.Student;
+import model.Teacher;
+import model.Type;
+import model.User;
+import service.DataService;
+import service.StudentGroupService;
+import view.StudentView;
+import view.TecherViev;
 
 import java.util.List;
 
-import Model.Student;
-import Model.Type;
-import Model.User;
-
 public class Controller {
-    private final DataService service = new DataService();
-    private final StudentView studentView = new StudentView();
+    private DataService service = new DataService();
+    private StudentView studentView = new StudentView();
+    private TecherViev teacherView = new TecherViev();
+    private StudentGroupService serviceSG = new StudentGroupService();
+
+    public void modyfy(){
+        System.out.println("Изменение данных: \n");
+        service.modyfyFirstName();
+        service.modyfySecondName();
+        service.modyfyLastName();
+    }
+    public void getStudGroup(){
+        List<Student> listUserST = service.getAllStudent();
+        printTeacher();
+        Teacher teacher = service.getTeacher();
+        serviceSG.createStudentGroup(teacher,listUserST);
+        System.out.println(teacher);
+        printStudents();
+        
+
+   }
 
     public void createStudent(String firstName, String secondName,
                               String lastName, String dateB){
-        service.create(firstName,secondName,lastName,dateB, Type.STUDENT);
+        service.create(firstName,secondName,lastName,dateB, Type.Student);
     }
 
-    public void getAllStudent(){
-        List<User> userList = service.getAllStudent();
-        for (User user: userList){
-            studentView.printOnConsole((Student) user);
+    public void createTeacher(String firstName, String secondName,
+                              String lastName, String dateB){
+        service.create(firstName,secondName,lastName,dateB, Type.Teacher);
+    }
+
+    public void printStudents(){
+        for (User user : service.getAllStudent()) {
+            studentView.printOnConsole((Student)user);
+        }
+    }
+
+    public void printTeacher(){
+        for(User user: service.getAllTeacher()){
+            teacherView.printTeacher((Teacher)user);
         }
     }
 }

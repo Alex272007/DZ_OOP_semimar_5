@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 public class Teacher extends User {
     private int teacherId;
@@ -20,11 +20,11 @@ public class Teacher extends User {
     @Override
     public String toString() {
         return "Teacher{" +
-                "teacherId='" + teacherId + '\'' +
-                ", firstName='" + super.getFirstName() + '\'' +
-                ", secondName='" + super.getSecondName() + '\'' +
-                ", patronymic='" + super.getLastName() + '\'' +
-                ", dateOfBirth=" + super.getDateB() +
+                "teacherId= '" + teacherId + '\'' +
+                ", firstName= '" + super.getFirstName() + '\'' +
+                ", secondName= '" + super.getSecondName() + '\'' +
+                ", patronymic= '" + super.getLastName() + '\'' +
+                ", direction= " + super.getDateB() +
                 '}';
     }
 }
